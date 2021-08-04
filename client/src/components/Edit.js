@@ -144,7 +144,7 @@ const Edit = (props) => {
                     }
                 </div>
                 <div>
-                <button type="submit">Add Instrument</button>
+                <button type="submit">Save</button>
                 <button onClick={ () => navigate("/")}>Cancel</button>
                 </div>
             </form>

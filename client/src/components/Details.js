@@ -65,13 +65,12 @@ const Details = (props) => {
                     Picture:
                 </td>
                 <td>
-                    { instrument.picture }
+                    { instrument.axeUrl }
                 </td>
                 </tr>
             </table>
             <div>
-            <button onClick={ () => navigate("/")}>Back</button>
-            <button onClick={ () => navigate("/create")}>Add Instrument</button>
+            <button onClick={ () => navigate("/")}>-- Back --</button>
             </div>
             
         </div>

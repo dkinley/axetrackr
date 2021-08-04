@@ -22,19 +22,26 @@ const GetAll = (props) => {
         <div>
             <table>
                 <thead>
-                    <th>Instrument Info</th>
-                    <th>Details</th>
+                    <th>Serial Number</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
                 </thead>
                 <tbody>
                     {
-                        allInstruments.map((instrument, index) => (
+                        allInstruments.map((axe, index) => (
                         <tr>
                             <td>
-                                <Link to={ `/axe/${instrument._id}`} >{instrument.name} </Link>
+                                <Link to={ `/axe/${axe._id}`} >{axe.serial} </Link>
                             </td>
                             <td>
-                            <DeleteButton _id={ instrument._id }/>
-                                <Link to={ `/axe/${instrument._id}/edit`}><button>Edit</button></Link>
+                                <p>{axe.make} </p>
+                            </td>
+                            <td>
+                                <p>{axe.model} </p>
+                            </td>
+                            <td>
+                                <p>{axe.year} </p>
                             </td>
                         </tr>
                         ))
