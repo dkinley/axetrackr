@@ -11,14 +11,13 @@ const AxeSchema = new mongoose.Schema({
         enum: [ "Fender", "Gibson", "Martin", "Taylor", "Ibanez", "Yamaha", "Epiphone", "Schecter", "Squier", "Other" ],
         // if it doesn't match one of these enums exactly it won't pass validaiton
         minlength: [0, "You need to select the make of the instrument"],
-        maxlength: [1, "You can only select one make"],
+
     },
     model: {
         type: String,
         enum: [ "Stratocaster", "Telecaster", "Duo-Sonic", "Les Paul", "SG", "Hummingbird", "Songwriter", "Other Electric", "Other Acoustic" ],
         // if it doesn't match one of these enums exactly it won't pass validaiton
         minlength: [0, "You need to select the model of the instrument"],
-        maxlength: [1, "You can only select one model"],
     },
 
     year: {
@@ -32,6 +31,8 @@ const AxeSchema = new mongoose.Schema({
         required: [ true, "You must input a description"],  //true - this is a required field, the 2nd part is the requirement
         minlength: [10, "Mention modifications, what string gauge play best and anything else noteable"],
     },
+
+    axeUrl: { type: String }
 },
     { timestamps: true }); // need it! this is the options of the Schema, required
     module.exports = mongoose.model("Axe", AxeSchema);
